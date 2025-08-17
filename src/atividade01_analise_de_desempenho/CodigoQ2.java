@@ -16,7 +16,7 @@ public class CodigoQ2 {
         long antes, depois, tempo;
 
         antes = System.nanoTime(); // marco de antes do processo (início)
-        for (int i = 0; i < TOTAL_DE_ELEMENTOS; i++) {
+        for (int i = 1; i <= TOTAL_DE_ELEMENTOS; i++) {
             // uso do argumento 0 para adicionar elementos no início da lista:
             lista.add(0, i);
         }

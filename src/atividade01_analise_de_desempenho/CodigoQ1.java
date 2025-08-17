@@ -22,14 +22,14 @@ public class CodigoQ1 {
 
         antes1 = System.nanoTime(); // marco de antes do processo (inicial)
         // processo de adicionar:
-        for (int i = 0; i < TOTAL_DE_ELEMENTOS; i++) {
+        for (int i = 1; i <= TOTAL_DE_ELEMENTOS; i++) {
             lista.add(i);
         }
         depois1 = System.nanoTime(); // marco do depois do processo (final)
 
         antes2 = System.nanoTime(); // marco de antes do processo (inicial)
         // processo de verificar se contém em todas as posições (do melhor até o pior caso)
-        for (int i = 0; i < TOTAL_DE_ELEMENTOS; i++) {
+        for (int i = 1; i <= TOTAL_DE_ELEMENTOS; i++) {
             lista.contains(i);
         }
         depois2 = System.nanoTime(); // marco do depois do processo (final)
