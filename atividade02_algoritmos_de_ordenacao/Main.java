@@ -9,9 +9,15 @@ public class Main {
         Utils.imprimir(vetor);
 
         int[] vetorBubbleClassico = vetor.clone();
-        Sort.bubbleClassico(vetorBubbleClassico, n);
+        int[] vetorBubbleOtimizado = vetor.clone();
 
-        System.out.print("Vetor Ordenado BubbleSort: ");
+        Sort.bubbleClassico(vetorBubbleClassico, n);
+        Sort.bubbleOtimizado(vetorBubbleOtimizado, n);
+
+        System.out.print("Vetor Ordenado BubbleSort Clássico: ");
+        Utils.imprimir(vetorBubbleClassico);
+
+        System.out.print("Vetor Ordenado BubbleSort Otimizado: ");
         Utils.imprimir(vetorBubbleClassico);
 
     }
