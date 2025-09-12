@@ -11,10 +11,12 @@ public class Main {
         int[] vetorBubbleClassico = vetor.clone();
         int[] vetorBubbleOtimizado = vetor.clone();
         int[] vetorSelectionClassico = vetor.clone();
+        int[] vetorInserction = vetor.clone();
 
         Sort.bubbleClassico(vetorBubbleClassico, n);
         Sort.bubbleOtimizado(vetorBubbleOtimizado, n);
         Sort.selectionClassico(vetorSelectionClassico, n);
+        Sort.inserction(vetorInserction, n);
 
         System.out.print("Vetor Ordenado BubbleSort Clássico: ");
         Utils.imprimir(vetorBubbleClassico);
@@ -24,6 +26,9 @@ public class Main {
 
         System.out.print("Vetor Ordenado SelectionSort Clássico: ");
         Utils.imprimir(vetorSelectionClassico);
+
+        System.out.print("Vetor Ordenado InserctionSort Clássico: ");
+        Utils.imprimir(vetorInserction);
 
     }
 }
