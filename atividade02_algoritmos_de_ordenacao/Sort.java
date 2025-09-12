@@ -51,9 +51,11 @@ public class Sort {
     public static void inserction(int[] vetorA, int n) {
 
         for (int i = 1; i < n; i++) {
+            
             int key = vetorA[i];
             int j = i - 1;
-            while (j > 0 && vetorA[j] > key) {
+            
+            while (j >= 0 && vetorA[j] > key) {
                 vetorA[j + 1] = vetorA[j];
                 j--;
             }
