@@ -10,15 +10,20 @@ public class Main {
 
         int[] vetorBubbleClassico = vetor.clone();
         int[] vetorBubbleOtimizado = vetor.clone();
+        int[] vetorSelectionClassico = vetor.clone();
 
         Sort.bubbleClassico(vetorBubbleClassico, n);
         Sort.bubbleOtimizado(vetorBubbleOtimizado, n);
+        Sort.selectionClassico(vetorSelectionClassico, n);
 
         System.out.print("Vetor Ordenado BubbleSort Clássico: ");
         Utils.imprimir(vetorBubbleClassico);
 
         System.out.print("Vetor Ordenado BubbleSort Otimizado: ");
         Utils.imprimir(vetorBubbleClassico);
+
+        System.out.print("Vetor Ordenado SelectionSort Clássico: ");
+        Utils.imprimir(vetorSelectionClassico);
 
     }
 }
