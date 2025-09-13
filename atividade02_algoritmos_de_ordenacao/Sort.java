@@ -49,6 +49,29 @@ public class Sort {
 
     }
 
+    public static void selectionEstavel(int[] vetorA, int n) {
+
+        for (int i = 0; i < n - 1; i++) {
+
+            int menorIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (vetorA[j] < vetorA[menorIndex]) {
+                    menorIndex = j;
+                }
+            }
+
+            int key = vetorA[menorIndex];
+
+            while (menorIndex > i) {
+                vetorA[menorIndex] = vetorA[menorIndex - 1];
+                menorIndex--;
+            }
+
+            vetorA[i] = key;
+        }
+
+    }
+
     public static void inserction(int[] vetorA, int n) {
 
         for (int i = 1; i < n; i++) {

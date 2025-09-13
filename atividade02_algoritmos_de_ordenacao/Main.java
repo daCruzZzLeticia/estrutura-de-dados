@@ -2,7 +2,7 @@ package atividade02_algoritmos_de_ordenacao;
 
 public class Main {
     public static void main(String[] args) {
-        int[] vetor = {8, 2, 9, 3, 5, 1, 6, 4, 7};
+        int[] vetor = {8, 2, 9, 3, 8, 3, 5, 1, 6, 4, 7};
         int n = vetor.length;
 
         // para counting
@@ -15,12 +15,14 @@ public class Main {
         int[] vetorBubbleClassico = vetor.clone();
         int[] vetorBubbleOtimizado = vetor.clone();
         int[] vetorSelectionClassico = vetor.clone();
+        int[] vetorSelectionEstavel = vetor.clone();
         int[] vetorInserction = vetor.clone();
         int[] vetorQuick = vetor.clone();
 
         Sort.bubbleClassico(vetorBubbleClassico, n);
         Sort.bubbleOtimizado(vetorBubbleOtimizado, n);
         Sort.selectionClassico(vetorSelectionClassico, n);
+        Sort.selectionClassico(vetorSelectionEstavel, n);
         Sort.inserction(vetorInserction, n);
         Sort.quick(vetorQuick, 0, n - 1);
         Sort.counting(vetor, vetorSaidaCouting, n, k);
@@ -32,6 +34,9 @@ public class Main {
         Utils.imprimir(vetorBubbleClassico);
 
         System.out.print("Vetor Ordenado SelectionSort Clássico: ");
+        Utils.imprimir(vetorSelectionClassico);
+
+        System.out.print("Vetor Ordenado SelectionSort Estável: ");
         Utils.imprimir(vetorSelectionClassico);
 
         System.out.print("Vetor Ordenado InserctionSort: ");
