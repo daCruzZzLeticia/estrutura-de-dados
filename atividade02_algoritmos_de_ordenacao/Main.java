@@ -5,6 +5,10 @@ public class Main {
         int[] vetor = {8, 2, 9, 3, 5, 1, 6, 4, 7};
         int n = vetor.length;
 
+        // para counting
+        int k = n + 1;
+        int[] vetorSaidaCouting = new int[n];
+
         System.out.print("Vetor Original: ");
         Utils.imprimir(vetor);
 
@@ -17,6 +21,7 @@ public class Main {
         Sort.bubbleOtimizado(vetorBubbleOtimizado, n);
         Sort.selectionClassico(vetorSelectionClassico, n);
         Sort.inserction(vetorInserction, n);
+        Sort.counting(vetor, vetorSaidaCouting, n, k);
 
         System.out.print("Vetor Ordenado BubbleSort Clássico: ");
         Utils.imprimir(vetorBubbleClassico);
@@ -27,8 +32,11 @@ public class Main {
         System.out.print("Vetor Ordenado SelectionSort Clássico: ");
         Utils.imprimir(vetorSelectionClassico);
 
-        System.out.print("Vetor Ordenado InserctionSort Clássico: ");
+        System.out.print("Vetor Ordenado InserctionSort: ");
         Utils.imprimir(vetorInserction);
+
+        System.out.print("Vetor Ordenado CountingSort: ");
+        Utils.imprimir(vetorSaidaCouting);
 
     }
 }

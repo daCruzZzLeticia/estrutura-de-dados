@@ -51,10 +51,10 @@ public class Sort {
     public static void inserction(int[] vetorA, int n) {
 
         for (int i = 1; i < n; i++) {
-            
+
             int key = vetorA[i];
             int j = i - 1;
-            
+
             while (j >= 0 && vetorA[j] > key) {
                 vetorA[j + 1] = vetorA[j];
                 j--;
@@ -63,6 +63,23 @@ public class Sort {
             vetorA[j + 1] = key;
         }
 
+    }
+
+    public static void counting(int[] vetorA, int[] vetorB, int n, int k) {
+        int[] vetorC = new int[k];
+
+        for (int j = 0; j < n; j++) {
+            vetorC[vetorA[j]]++;
+        }
+
+        for (int i = 1; i < k; i++) {
+            vetorC[i] += vetorC[i - 1];
+        }
+
+        for (int j = n - 1; j >= 0; j--) {
+            vetorB[vetorC[vetorA[j]] - 1] = vetorA[j];
+            vetorC[vetorA[j]]--;
+        }
     }
 
 }
