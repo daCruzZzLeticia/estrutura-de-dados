@@ -30,6 +30,7 @@ public class Sort {
             if (!trocou)
                 break;
         }
+
     }
 
     public static void selectionClassico(int[] vetorA, int n) {
@@ -65,7 +66,39 @@ public class Sort {
 
     }
 
+    public static int partition(int[] vetor, int l, int r) {
+        int p = vetor[l];
+        int i = l + 1;
+        int j = r;
+
+        while (i <= j) {
+            if (vetor[i] <= p) {
+                i++;
+            } else if (vetor[j] > p) {
+                j--;
+            } else {
+                Utils.troca(vetor, i, j);
+            }
+        }
+
+        Utils.troca(vetor, l, j);
+        for (int num : vetor) {
+            System.out.print(num + " ");
+        }
+        System.out.print("\n");
+        return j;
+    }
+
+    public static void quick(int[] vetor, int l, int r) {
+        if (l < r) {
+            int p = partition(vetor, l, r);
+            quick(vetor, l, p - 1);
+            quick(vetor, p + 1, r);
+        }
+    }
+
     public static void counting(int[] vetorA, int[] vetorB, int n, int k) {
+
         int[] vetorC = new int[k];
 
         for (int j = 0; j < n; j++) {

@@ -16,11 +16,13 @@ public class Main {
         int[] vetorBubbleOtimizado = vetor.clone();
         int[] vetorSelectionClassico = vetor.clone();
         int[] vetorInserction = vetor.clone();
+        int[] vetorQuick = vetor.clone();
 
         Sort.bubbleClassico(vetorBubbleClassico, n);
         Sort.bubbleOtimizado(vetorBubbleOtimizado, n);
         Sort.selectionClassico(vetorSelectionClassico, n);
         Sort.inserction(vetorInserction, n);
+        Sort.quick(vetorQuick, 0, n - 1);
         Sort.counting(vetor, vetorSaidaCouting, n, k);
 
         System.out.print("Vetor Ordenado BubbleSort Clássico: ");
@@ -35,8 +37,10 @@ public class Main {
         System.out.print("Vetor Ordenado InserctionSort: ");
         Utils.imprimir(vetorInserction);
 
+        System.out.print("Vetor Ordenado QuickSort: ");
+        Utils.imprimir(vetorQuick);
+
         System.out.print("Vetor Ordenado CountingSort: ");
         Utils.imprimir(vetorSaidaCouting);
-
     }
 }
