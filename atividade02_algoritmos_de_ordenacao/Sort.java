@@ -8,6 +8,8 @@ public class Sort {
             for (int j = 0; j < n - 1; j++) {
                 if (vetorA[j] > vetorA[j + 1]) {
                     Utils.troca(vetorA, j, j + 1);
+
+                    Utils.imprimir(vetorA);
                 }
             }
         }
@@ -24,6 +26,8 @@ public class Sort {
                 if (vetorA[j] > vetorA[j + 1]) {
                     Utils.troca(vetorA, j, j + 1);
                     trocou = true;
+
+                    Utils.imprimir(vetorA);
                 }
             }
 
@@ -45,6 +49,7 @@ public class Sort {
             }
 
             Utils.troca(vetorA, i, menorIndex);
+            Utils.imprimir(vetorA);
         }
 
     }
@@ -68,6 +73,8 @@ public class Sort {
             }
 
             vetorA[i] = key;
+
+            Utils.imprimir(vetorA);
         }
 
     }
@@ -85,6 +92,8 @@ public class Sort {
             }
 
             vetorA[j + 1] = key;
+
+            Utils.imprimir(vetorA);
         }
 
     }
@@ -105,10 +114,9 @@ public class Sort {
         }
 
         Utils.troca(vetor, l, j);
-        for (int num : vetor) {
-            System.out.print(num + " ");
-        }
-        System.out.print("\n");
+
+        Utils.imprimir(vetor);
+
         return j;
     }
 

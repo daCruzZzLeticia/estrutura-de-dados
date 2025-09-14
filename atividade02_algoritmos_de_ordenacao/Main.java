@@ -19,33 +19,39 @@ public class Main {
         int[] vetorInserction = vetor.clone();
         int[] vetorQuick = vetor.clone();
 
-        Sort.bubbleClassico(vetorBubbleClassico, n);
-        Sort.bubbleOtimizado(vetorBubbleOtimizado, n);
-        Sort.selectionClassico(vetorSelectionClassico, n);
-        Sort.selectionClassico(vetorSelectionEstavel, n);
-        Sort.inserction(vetorInserction, n);
-        Sort.quick(vetorQuick, 0, n - 1);
         Sort.counting(vetor, vetorSaidaCouting, n, k);
 
-        System.out.print("Vetor Ordenado BubbleSort Clássico: ");
+        System.out.println("\nPassos BubbleSort Clássico:");
+        Sort.bubbleClassico(vetorBubbleClassico, n);
+        System.out.println("\nVetor Ordenado BubbleSort Clássico:");
         Utils.imprimir(vetorBubbleClassico);
 
-        System.out.print("Vetor Ordenado BubbleSort Otimizado: ");
+        System.out.println("\nPassos BubbleSort Otimizado:");
+        Sort.bubbleOtimizado(vetorBubbleOtimizado, n);
+        System.out.println("\nVetor Ordenado BubbleSort Otimizado:");
         Utils.imprimir(vetorBubbleClassico);
 
-        System.out.print("Vetor Ordenado SelectionSort Clássico: ");
+        System.out.println("\nPassos SelectionSort Clássico:");
+        Sort.selectionClassico(vetorSelectionClassico, n);
+        System.out.println("\nVetor Ordenado SelectionSort Clássico:");
         Utils.imprimir(vetorSelectionClassico);
 
-        System.out.print("Vetor Ordenado SelectionSort Estável: ");
-        Utils.imprimir(vetorSelectionClassico);
+        System.out.println("\nPassos SelectionSort Estável:");
+        Sort.selectionEstavel(vetorSelectionEstavel, n);
+        System.out.println("\nVetor Ordenado SelectionSort Estável:");
+        Utils.imprimir(vetorSelectionEstavel);
 
-        System.out.print("Vetor Ordenado InserctionSort: ");
+        System.out.println("\nPassos InserctionSort:");
+        Sort.inserction(vetorInserction, n);
+        System.out.println("\nVetor Ordenado InserctionSort:");
         Utils.imprimir(vetorInserction);
 
-        System.out.print("Vetor Ordenado QuickSort: ");
+        System.out.println("\nPassos QuickSort:");
+        Sort.quick(vetorQuick, 0, n - 1);
+        System.out.println("\nVetor Ordenado QuickSort:");
         Utils.imprimir(vetorQuick);
 
-        System.out.print("Vetor Ordenado CountingSort: ");
+        System.out.println("\nVetor Ordenado CountingSort:");
         Utils.imprimir(vetorSaidaCouting);
     }
 }
